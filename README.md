@@ -1,5 +1,10 @@
 # Torch (easy) install
 
+If you work in clusters such as deepthought.umd.edu, you don't have root privilege. Then do:
+```bash
+curl -s https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch-local | PREFIX=$(custom-install-path) bash
+```
+
 This is just an easy install script for Torch7.
 
 The goal of this script is to enable one line installs. To install Torch on any machine, just do:
