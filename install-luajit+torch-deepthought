@@ -26,17 +26,17 @@
 PREFIX=${PREFIX-$HOME/local}
 
 echo "Removing old caches"
-rm -rf ~/.luarocks
-rm -rf ~/.cache/luarocks*
+#rm -rf ~/.luarocks
+#rm -rf ~/.cache/luarocks*
 
-echo "Installing wget-1.16 into: $PREFIX"
+echo "Installing wget-1.16 into: $HOME/local"
 if [ ! -e wget-1.16.tar.gz ]; then
 	curl http://ftp.gnu.org/gnu/wget/wget-1.16.tar.gz -O wget-1.16.tar.gz
 fi
 tar xzf wget-1.16.tar.gz
 rm -rf wget-1.16.tar.gz
 cd wget-1.16
-./configure --prefix="$PREFIX"
+./configure --prefix="$HOME/local"
 make install
 
 export PATH=/homes/angl/local/bin:$PATH
