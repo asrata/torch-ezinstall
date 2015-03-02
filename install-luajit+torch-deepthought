@@ -26,8 +26,8 @@
 PREFIX=${PREFIX-$HOME/local}
 
 echo "Removing old caches"
-#rm -rf ~/.luarocks
-#rm -rf ~/.cache/luarocks*
+rm -rf ~/.luarocks
+rm -rf ~/.cache/luarocks*
 
 echo "Installing wget-1.16 into: $HOME/local"
 if [ ! -e wget-1.16.tar.gz ]; then
